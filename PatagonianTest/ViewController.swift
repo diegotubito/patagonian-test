@@ -13,6 +13,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let api_url = Constants.BaseURL.endpoint
+        let url = "\(api_url)/coldplay/fix yo"
+        ServiceManager.shared.searchLyric(stringUrl: url, success: { (list) in
+            print("success")
+            print(list)
+        }) { (error) in
+            print(error.localizedDescription)
+        }
     }
 
 

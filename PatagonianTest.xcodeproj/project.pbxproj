@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,8 +19,9 @@
 		11EFC02C24B9269A002D39BA /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFC02B24B9269A002D39BA /* SearchViewModel.swift */; };
 		11EFC02E24B926A4002D39BA /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFC02D24B926A4002D39BA /* SearchModel.swift */; };
 		11EFC03124B92840002D39BA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFC03024B92840002D39BA /* Constants.swift */; };
-		11EFC03324B9291C002D39BA /* BaseServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFC03224B9291C002D39BA /* BaseServiceManager.swift */; };
 		11EFC03624B929C9002D39BA /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFC03524B929C9002D39BA /* Reachability.swift */; };
+		11EFC03824B92B66002D39BA /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFC03724B92B66002D39BA /* ServiceManager.swift */; };
+		11EFC03A24B92BF2002D39BA /* LyricModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFC03924B92BF2002D39BA /* LyricModel.swift */; };
 		70B261DEE3F0BC4B8209BB65 /* Pods_PatagonianTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5FFBA95FD941B9BA4E564F3 /* Pods_PatagonianTest.framework */; };
 		80414469905DF82B65734C16 /* Pods_PatagonianTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D084D5B7F8C998EB62D111 /* Pods_PatagonianTestTests.framework */; };
 /* End PBXBuildFile section */
@@ -52,8 +53,9 @@
 		11EFC02B24B9269A002D39BA /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		11EFC02D24B926A4002D39BA /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		11EFC03024B92840002D39BA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		11EFC03224B9291C002D39BA /* BaseServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceManager.swift; sourceTree = "<group>"; };
 		11EFC03524B929C9002D39BA /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		11EFC03724B92B66002D39BA /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		11EFC03924B92BF2002D39BA /* LyricModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricModel.swift; sourceTree = "<group>"; };
 		230D7B9BF4BBB9423B03079D /* Pods-PatagonianTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatagonianTestTests.debug.xcconfig"; path = "Target Support Files/Pods-PatagonianTestTests/Pods-PatagonianTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D8D4E9C411EDC8B07D3AECE /* Pods-PatagonianTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatagonianTest.release.xcconfig"; path = "Target Support Files/Pods-PatagonianTest/Pods-PatagonianTest.release.xcconfig"; sourceTree = "<group>"; };
 		4002E4BBB7A92CA7D61335FC /* Pods-PatagonianTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatagonianTestTests.release.xcconfig"; path = "Target Support Files/Pods-PatagonianTestTests/Pods-PatagonianTestTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		11EFC01E24B924D0002D39BA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				11EFC03924B92BF2002D39BA /* LyricModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,7 +193,7 @@
 		11EFC02024B924DD002D39BA /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				11EFC03224B9291C002D39BA /* BaseServiceManager.swift */,
+				11EFC03724B92B66002D39BA /* ServiceManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -277,7 +280,6 @@
 				230D7B9BF4BBB9423B03079D /* Pods-PatagonianTestTests.debug.xcconfig */,
 				4002E4BBB7A92CA7D61335FC /* Pods-PatagonianTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -452,13 +454,14 @@
 			files = (
 				11EFC02A24B92692002D39BA /* SearchViewModelProtocol.swift in Sources */,
 				11EFC02C24B9269A002D39BA /* SearchViewModel.swift in Sources */,
-				11EFC03324B9291C002D39BA /* BaseServiceManager.swift in Sources */,
 				11EFC02824B92673002D39BA /* SearchViewController.swift in Sources */,
 				11EFC02E24B926A4002D39BA /* SearchModel.swift in Sources */,
 				11EFC03624B929C9002D39BA /* Reachability.swift in Sources */,
 				11EFC03124B92840002D39BA /* Constants.swift in Sources */,
 				11EFBFFA24B92107002D39BA /* ViewController.swift in Sources */,
 				11EFBFF624B92107002D39BA /* AppDelegate.swift in Sources */,
+				11EFC03A24B92BF2002D39BA /* LyricModel.swift in Sources */,
+				11EFC03824B92B66002D39BA /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

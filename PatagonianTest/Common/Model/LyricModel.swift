@@ -1,5 +1,5 @@
 //
-//  Constants.swift
+//  File.swift
 //  PatagonianTest
 //
 //  Created by David Diego Gomez on 10/07/2020.
@@ -8,9 +8,6 @@
 
 import Foundation
 
-struct Constants {
-    struct BaseURL {
-        static let endpoint = "https://api.lyrics.ovh/v1"
-    }
-    
+struct LyricModel: Decodable {
+    var lyrics : String
 }
