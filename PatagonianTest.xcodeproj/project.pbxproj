@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		11930B0C24BA29160076EBA7 /* HistoryRecordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11930B0B24BA29160076EBA7 /* HistoryRecordManager.swift */; };
+		11930B1024BA337B0076EBA7 /* TestServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11930B0F24BA337B0076EBA7 /* TestServiceManager.swift */; };
+		11930B1224BA33F00076EBA7 /* MockServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11930B1124BA33F00076EBA7 /* MockServiceManager.swift */; };
 		11EFBFF624B92107002D39BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFBFF524B92107002D39BA /* AppDelegate.swift */; };
 		11EFBFFA24B92107002D39BA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFBFF924B92107002D39BA /* HomeViewController.swift */; };
 		11EFBFFD24B92107002D39BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11EFBFFB24B92107002D39BA /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		11930B0B24BA29160076EBA7 /* HistoryRecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRecordManager.swift; sourceTree = "<group>"; };
+		11930B0F24BA337B0076EBA7 /* TestServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestServiceManager.swift; sourceTree = "<group>"; };
+		11930B1124BA33F00076EBA7 /* MockServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceManager.swift; sourceTree = "<group>"; };
 		11EFBFF224B92107002D39BA /* PatagonianTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatagonianTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11EFBFF524B92107002D39BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11EFBFF924B92107002D39BA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +106,23 @@
 			path = UserDefault;
 			sourceTree = "<group>";
 		};
+		11930B0D24BA33490076EBA7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				11930B0E24BA335D0076EBA7 /* Mock */,
+				11930B0F24BA337B0076EBA7 /* TestServiceManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		11930B0E24BA335D0076EBA7 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				11930B1124BA33F00076EBA7 /* MockServiceManager.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		11EFBFE924B92107002D39BA = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				11EFC00C24B9210B002D39BA /* PatagonianTestTests.swift */,
+				11930B0D24BA33490076EBA7 /* API */,
 				11EFC00E24B9210B002D39BA /* Info.plist */,
 			);
 			path = PatagonianTestTests;
@@ -514,6 +536,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				11EFC00D24B9210B002D39BA /* PatagonianTestTests.swift in Sources */,
+				11930B1224BA33F00076EBA7 /* MockServiceManager.swift in Sources */,
+				11930B1024BA337B0076EBA7 /* TestServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
