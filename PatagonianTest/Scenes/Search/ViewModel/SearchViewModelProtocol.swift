@@ -17,5 +17,5 @@ protocol SearchViewProtocol {
     func showLoading()
     func hideLoading()
     func showSuccess(model: LyricModel)
-    func showError(message: String)
+    func showError(title: String, message: String)
 }

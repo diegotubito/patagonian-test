@@ -19,6 +19,11 @@ class SearchViewModel: SearchViewModelProtocol {
     }
     
     func makeSearch(artist: String, song: String) {
+        if !Reachability.shared.isConnectedToWifi() {
+            _view.showError(title: "Error Connection", message: "There is not an internet connection.")
+            return
+        }
+        
         let api_url = Constants.BaseURL.endpoint
         let url = "\(api_url)/\(artist)/\(song)"
         _view.showLoading()
@@ -32,7 +37,7 @@ class SearchViewModel: SearchViewModelProtocol {
             self._view.showSuccess(model: newItem)
         }) { (error) in
             self._view.hideLoading()
-            self._view.showError(message: error.localizedDescription)
+            self._view.showError(title: "Search Failed", message: "The lyrics your are looking for was not found.")
         }
     }
     

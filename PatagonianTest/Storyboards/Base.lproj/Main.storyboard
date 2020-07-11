@@ -337,6 +337,7 @@
                         <outlet property="artistTF" destination="oGb-u0-GfX" id="Cml-CA-LN7"/>
                         <outlet property="indicator" destination="dON-E7-P3b" id="V2n-UT-sOp"/>
                         <outlet property="lastSearchView" destination="XAa-FS-GvC" id="pho-Lv-hoA"/>
+                        <outlet property="searchButtonOutlet" destination="UEc-O8-2OF" id="8MO-Iq-rEb"/>
                         <outlet property="songLabel" destination="o9m-Wx-m7n" id="3Q0-rq-pZI"/>
                         <outlet property="songTF" destination="xuo-v1-IWg" id="m2a-Nb-iND"/>
                         <segue destination="56K-wq-qSy" kind="show" identifier="segue_history" id="S88-ET-YhP"/>

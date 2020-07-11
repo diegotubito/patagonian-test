@@ -11,6 +11,7 @@ import UIKit
 
 class SearchViewController : BaseViewController {
   
+    @IBOutlet weak var searchButtonOutlet: UIButton!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var artistTF: UITextField!
     @IBOutlet weak var songTF: UITextField!
@@ -21,6 +22,8 @@ class SearchViewController : BaseViewController {
     
     override func viewDidLoad() {
         super .viewDidLoad()
+        artistTF.delegate = self
+        songTF.delegate = self
         viewModel = SearchViewModel(withView: self)
         hideLastSearchView()
         addGesture()
@@ -31,11 +34,15 @@ class SearchViewController : BaseViewController {
         showLastSuccessfullSearch()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+         artistTF.becomeFirstResponder()
+    }
+    
     @IBAction func historyButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "segue_history", sender: nil)
     }
     
-    @IBAction func searchButtonTapped(_ sender: Any) {
+    @IBAction func searchButtonTapped(_ sender: Any?) {
         if validateFields() {
             let artist = artistTF.text ?? ""
             let song = songTF.text ?? ""
@@ -97,12 +104,16 @@ extension SearchViewController: SearchViewProtocol {
     func showLoading() {
         DispatchQueue.main.async {
             self.indicator.startAnimating()
+            self.searchButtonOutlet.isEnabled = false
+            self.searchButtonOutlet.alpha = 0.3
         }
     }
     
     func hideLoading() {
         DispatchQueue.main.async {
             self.indicator.stopAnimating()
+            self.searchButtonOutlet.isEnabled = true
+            self.searchButtonOutlet.alpha = 1
         }
     }
     
@@ -112,9 +123,24 @@ extension SearchViewController: SearchViewProtocol {
         }
     }
     
-    func showError(message: String) {
+    func showError(title: String, message: String) {
         DispatchQueue.main.async {
-            self.showAlert(title: "Not Found", message: "The lyrics your are looking for wasn't found.")
+            self.showAlert(title: title, message: message)
         }
+    }
+}
+
+extension SearchViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == artistTF {
+            songTF.becomeFirstResponder()
+        } else {
+            searchButtonTapped(nil)
+        }
+        return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.selectedTextRange = textField.textRange(from: textField.beginningOfDocument, to: textField.endOfDocument)
     }
 }
