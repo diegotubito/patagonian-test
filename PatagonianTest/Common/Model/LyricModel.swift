@@ -8,6 +8,8 @@
 
 import Foundation
 
-struct LyricModel: Decodable {
+struct LyricModel: Codable {
+    var artist : String?
+    var song : String?
     var lyrics : String
 }

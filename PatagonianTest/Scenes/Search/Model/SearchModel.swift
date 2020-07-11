@@ -9,5 +9,7 @@
 import Foundation
 
 struct SearchModel {
-    
+    var artist : String
+    var song : String
+    var lyric : String
 }

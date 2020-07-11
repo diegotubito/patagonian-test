@@ -8,12 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		11EFBFF624B92107002D39BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFBFF524B92107002D39BA /* AppDelegate.swift */; };
-		11EFBFFA24B92107002D39BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFBFF924B92107002D39BA /* ViewController.swift */; };
+		11EFBFFA24B92107002D39BA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFBFF924B92107002D39BA /* HomeViewController.swift */; };
 		11EFBFFD24B92107002D39BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11EFBFFB24B92107002D39BA /* Main.storyboard */; };
 		11EFBFFF24B9210B002D39BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11EFBFFE24B9210B002D39BA /* Assets.xcassets */; };
 		11EFC00224B9210B002D39BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11EFC00024B9210B002D39BA /* LaunchScreen.storyboard */; };
 		11EFC00D24B9210B002D39BA /* PatagonianTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFC00C24B9210B002D39BA /* PatagonianTestTests.swift */; };
-		11EFC01C24B9242F002D39BA /* SearchSongs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11EFC01B24B9242F002D39BA /* SearchSongs.storyboard */; };
 		11EFC02824B92673002D39BA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFC02724B92673002D39BA /* SearchViewController.swift */; };
 		11EFC02A24B92692002D39BA /* SearchViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFC02924B92692002D39BA /* SearchViewModelProtocol.swift */; };
 		11EFC02C24B9269A002D39BA /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFC02B24B9269A002D39BA /* SearchViewModel.swift */; };
@@ -22,6 +21,8 @@
 		11EFC03624B929C9002D39BA /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFC03524B929C9002D39BA /* Reachability.swift */; };
 		11EFC03824B92B66002D39BA /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFC03724B92B66002D39BA /* ServiceManager.swift */; };
 		11EFC03A24B92BF2002D39BA /* LyricModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFC03924B92BF2002D39BA /* LyricModel.swift */; };
+		11EFC03E24B96B7A002D39BA /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFC03D24B96B7A002D39BA /* Router.swift */; };
+		11EFC04124B9726D002D39BA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EFC04024B9726D002D39BA /* BaseViewController.swift */; };
 		70B261DEE3F0BC4B8209BB65 /* Pods_PatagonianTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5FFBA95FD941B9BA4E564F3 /* Pods_PatagonianTest.framework */; };
 		80414469905DF82B65734C16 /* Pods_PatagonianTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D084D5B7F8C998EB62D111 /* Pods_PatagonianTestTests.framework */; };
 /* End PBXBuildFile section */
@@ -39,7 +40,7 @@
 /* Begin PBXFileReference section */
 		11EFBFF224B92107002D39BA /* PatagonianTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatagonianTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11EFBFF524B92107002D39BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		11EFBFF924B92107002D39BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		11EFBFF924B92107002D39BA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		11EFBFFC24B92107002D39BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11EFBFFE24B9210B002D39BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11EFC00124B9210B002D39BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		11EFC00824B9210B002D39BA /* PatagonianTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PatagonianTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11EFC00C24B9210B002D39BA /* PatagonianTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatagonianTestTests.swift; sourceTree = "<group>"; };
 		11EFC00E24B9210B002D39BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		11EFC01B24B9242F002D39BA /* SearchSongs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchSongs.storyboard; sourceTree = "<group>"; };
 		11EFC02724B92673002D39BA /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		11EFC02924B92692002D39BA /* SearchViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelProtocol.swift; sourceTree = "<group>"; };
 		11EFC02B24B9269A002D39BA /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -56,6 +56,8 @@
 		11EFC03524B929C9002D39BA /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		11EFC03724B92B66002D39BA /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		11EFC03924B92BF2002D39BA /* LyricModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LyricModel.swift; sourceTree = "<group>"; };
+		11EFC03D24B96B7A002D39BA /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		11EFC04024B9726D002D39BA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		230D7B9BF4BBB9423B03079D /* Pods-PatagonianTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatagonianTestTests.debug.xcconfig"; path = "Target Support Files/Pods-PatagonianTestTests/Pods-PatagonianTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D8D4E9C411EDC8B07D3AECE /* Pods-PatagonianTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatagonianTest.release.xcconfig"; path = "Target Support Files/Pods-PatagonianTest/Pods-PatagonianTest.release.xcconfig"; sourceTree = "<group>"; };
 		4002E4BBB7A92CA7D61335FC /* Pods-PatagonianTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatagonianTestTests.release.xcconfig"; path = "Target Support Files/Pods-PatagonianTestTests/Pods-PatagonianTestTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,7 +114,6 @@
 				11EFC01924B9235B002D39BA /* Scenes */,
 				11EFC01824B922AE002D39BA /* Storyboards */,
 				11EFC01724B922A4002D39BA /* Resources */,
-				11EFBFF924B92107002D39BA /* ViewController.swift */,
 			);
 			path = PatagonianTest;
 			sourceTree = "<group>";
@@ -140,7 +141,6 @@
 			children = (
 				11EFC00024B9210B002D39BA /* LaunchScreen.storyboard */,
 				11EFBFFB24B92107002D39BA /* Main.storyboard */,
-				11EFC01B24B9242F002D39BA /* SearchSongs.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -159,6 +159,7 @@
 		11EFC01A24B92364002D39BA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				11EFBFF924B92107002D39BA /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -166,6 +167,7 @@
 		11EFC01D24B92474002D39BA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				11EFC03F24B9725C002D39BA /* BaseViewController */,
 				11EFC03424B929BB002D39BA /* Reachable */,
 				11EFC02F24B92809002D39BA /* Constants */,
 				11EFC02024B924DD002D39BA /* Service */,
@@ -186,6 +188,7 @@
 		11EFC01F24B924D4002D39BA /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				11EFC03D24B96B7A002D39BA /* Router.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -261,6 +264,14 @@
 				11EFC03524B929C9002D39BA /* Reachability.swift */,
 			);
 			path = Reachable;
+			sourceTree = "<group>";
+		};
+		11EFC03F24B9725C002D39BA /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				11EFC04024B9726D002D39BA /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
 			sourceTree = "<group>";
 		};
 		3932AE96BC6467E3170A3CB1 /* Frameworks */ = {
@@ -368,7 +379,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				11EFC00224B9210B002D39BA /* LaunchScreen.storyboard in Resources */,
-				11EFC01C24B9242F002D39BA /* SearchSongs.storyboard in Resources */,
 				11EFBFFF24B9210B002D39BA /* Assets.xcassets in Resources */,
 				11EFBFFD24B92107002D39BA /* Main.storyboard in Resources */,
 			);
@@ -452,13 +462,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11EFC03E24B96B7A002D39BA /* Router.swift in Sources */,
 				11EFC02A24B92692002D39BA /* SearchViewModelProtocol.swift in Sources */,
 				11EFC02C24B9269A002D39BA /* SearchViewModel.swift in Sources */,
 				11EFC02824B92673002D39BA /* SearchViewController.swift in Sources */,
 				11EFC02E24B926A4002D39BA /* SearchModel.swift in Sources */,
 				11EFC03624B929C9002D39BA /* Reachability.swift in Sources */,
 				11EFC03124B92840002D39BA /* Constants.swift in Sources */,
-				11EFBFFA24B92107002D39BA /* ViewController.swift in Sources */,
+				11EFBFFA24B92107002D39BA /* HomeViewController.swift in Sources */,
+				11EFC04124B9726D002D39BA /* BaseViewController.swift in Sources */,
 				11EFBFF624B92107002D39BA /* AppDelegate.swift in Sources */,
 				11EFC03A24B92BF2002D39BA /* LyricModel.swift in Sources */,
 				11EFC03824B92B66002D39BA /* ServiceManager.swift in Sources */,
