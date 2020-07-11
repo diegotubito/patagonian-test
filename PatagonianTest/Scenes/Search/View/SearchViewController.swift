@@ -23,6 +23,7 @@ class SearchViewController : BaseViewController {
         super .viewDidLoad()
         viewModel = SearchViewModel(withView: self)
         hideLastSearchView()
+        addGesture()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,6 +32,7 @@ class SearchViewController : BaseViewController {
     }
     
     @IBAction func historyButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "segue_history", sender: nil)
     }
     
     @IBAction func searchButtonTapped(_ sender: Any) {
@@ -43,6 +45,18 @@ class SearchViewController : BaseViewController {
         }
     }
     
+    private func addGesture() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(lastSearchViewTapped))
+        lastSearchView.addGestureRecognizer(tap)
+    }
+    
+    @objc private func lastSearchViewTapped() {
+        let array = HistoryRecordManager.ReadHistorySearch()
+        if let item = array.last {
+            routeToLyricDetail(item: item)
+        }
+    }
+    
     private func hideLastSearchView() {
         lastSearchView.isHidden = true
     }
@@ -52,11 +66,14 @@ class SearchViewController : BaseViewController {
     }
     
     private func validateFields() -> Bool {
+        if (artistTF.text?.isEmpty)! || (songTF.text?.isEmpty)! {
+            return false
+        }
         return true
     }
     
     private func showLastSuccessfullSearch() {
-        let array = HistorySearchManager.ReadHistorySearch()
+        let array = HistoryRecordManager.ReadHistorySearch()
         if !array.isEmpty {
             let element = array.last
             showLastSearchView()
@@ -66,9 +83,13 @@ class SearchViewController : BaseViewController {
         } else {
             hideLastSearchView()
         }
-        array.forEach { (element) in
-            print(element.song)
-        }
+    }
+    
+    fileprivate func routeToLyricDetail(item: LyricModel) {
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LyricViewController") as! LyricViewController
+        vc.lyric = item
+        present(vc, animated: true, completion: nil)
     }
 }
 

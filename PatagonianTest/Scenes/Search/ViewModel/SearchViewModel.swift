@@ -37,49 +37,10 @@ class SearchViewModel: SearchViewModelProtocol {
     }
     
     private func addNewSearchToHistory(item: LyricModel) {
-        let array = HistorySearchManager.ReadHistorySearch()
+        let array = HistoryRecordManager.ReadHistorySearch()
         var reduce = array.filter({$0.artist != item.artist || $0.song != item.song})
         reduce.append(item)
-        HistorySearchManager.SaveHistorySearch(items: reduce)
+        HistoryRecordManager.SaveHistorySearch(items: reduce)
         
     }
 }
-
-class HistorySearchManager {
-    let shared : HistorySearchManager!
-    
-    init() {
-        shared = HistorySearchManager()
-    }
-    
-    var lyricArray = [LyricModel]()
-    
-    enum Keys : String {
-        case historySearch = "historySearch"
-    }
-    
-    static func SaveHistorySearch(items: [LyricModel]) {
-        do {
-            let data = try JSONEncoder().encode(items)
-            UserDefaults.standard.set(data, forKey: Keys.historySearch.rawValue)
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-    
-    static func ReadHistorySearch() -> [LyricModel] {
-       
-        if let data = UserDefaults.standard.object(forKey: Keys.historySearch.rawValue) as? Data {
-            do {
-                let item = try JSONDecoder().decode([LyricModel].self, from: data)
-                return item
-            } catch {
-                return [LyricModel]()
-            }
-        }
-        
-        return [LyricModel]()
-    }
-    
-}
-
